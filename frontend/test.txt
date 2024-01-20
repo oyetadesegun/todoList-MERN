@@ -1,0 +1,62 @@
+<p>Here is a signed and Approved UAT form for &nbsp;</p>
+variables('the HTML')
+
+<br/>
+<table>
+  <tr>
+    <th>Tester</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td><strong>Tested By:</strong></td>
+    <td>toUpper(first(split(items('Get_Approval_email')?['Testedby_x003a_'], '@'))), '.', ' '</td>
+  </tr>
+  <tr>
+    <td><strong>Date:</strong></td>
+    <td>triggerOutputs()?['body/receivedDateTime'], 'dddd, MMMM d, yyyy'</td>
+  </tr>
+  <tr>
+    <td><strong>Comment:</strong></td>
+    <td>items('Get_Approval_email')?['Comments']</td>
+  </tr>
+</table>
+<br/>
+<h2>Divisional Head Approval:</h2>
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td><strong>Approved By:</strong></td>
+    <td>items('Apply_to_each_3')?['responder/displayName']</td>
+  </tr>
+  <tr>
+    <td><strong>Date:</strong></td>
+    <td>outputs('Divisional_Head_Approval')?['body/completionDate'], 'dddd, MMMM d, yyyy'</td>
+  </tr>
+  <tr>
+    <td><strong>Comment:</strong></td>
+    <td>items('Apply_to_each_3')?['comments']</td>
+  </tr>
+</table>
+<br/>
+<h2>Head of IT Approval:</h2>
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td><strong>Approved By:</strong></td>
+    <td>items('Apply_to_each_4')?['responder/displayName']</td>
+  </tr>
+  <tr>
+    <td><strong>Date:</strong></td>
+    <td>outputs('Head_of_IT_Approval')?['body/completionDate'], 'dddd, MMMM d, yyyy'</td>
+  </tr>
+  <tr>
+    <td><strong>Comment:</strong></td>
+    <td>items('Apply_to_each_4')?['comments']</td>
+  </tr>
+</table>

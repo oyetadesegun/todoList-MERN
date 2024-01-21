@@ -6,7 +6,7 @@ const routes = require("./Routers/todoRoutes");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3001", "http://localhost:5173"],
+    origin: ["http://localhost:3001", "http://localhost:5173","https://todo-list-mern-api-chi.vercel.app","https://todo-list-mern-home.vercel.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })

@@ -1,3 +1,23 @@
 swagger: "2.0"
 info:
   title: Todo List
+  description: This API provides endpoints to manage a Todo List application. Users can create, retrieve, update, and delete tasks in their Todo List.
+  version: 1.0.0
+  contact:
+    email: johnwellacademy@gmail.com
+  license:
+    name: The Todo App
+    url: "http://localhost:5173/"
+  servers:
+    -url: "http://localhost:4000"
+    description: Here is the link to the backend
+schemes: [http, https]
+paths:
+  /get:
+    get:
+      summary: Returns all existing Task
+      description: It shows all task you have created in the past
+      responses:
+        200:
+          description: Success
+

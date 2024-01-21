@@ -1,3 +1,3 @@
 {
-    "ext": ".js,.mjs,.cjs,.json, .yaml"
+    "ext": ".js,.mjs,.json,.yaml"
 }

@@ -4,13 +4,13 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./Routers/todoRoutes");
 const app = express();
-app.use(cors());
-//   cors({
-//     origin: ["https://todo-list-mern-seven.vercel.app","https://todo-list-mern-seven.vercel.app/"],
-//     methods: ["POST", "GET", "PUT", "DELETE"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: ["https://todo-list-mern-seven.vercel.app","http://todolist-1yar.onrender.com"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 // Swagger Documentation
 const swaggerUI = require("swagger-ui-express");

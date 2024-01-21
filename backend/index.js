@@ -6,9 +6,9 @@ const routes = require("./Routers/todoRoutes");
 const app = express();
 app.use(
   cors({
-    origin: ["https://todo-list-mern-seven.vercel.app","http://localhost:3001"],
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true,
+    // origin: ["https://todo-list-mern-seven.vercel.app","http://localhost:3001"],
+    // methods: ["POST", "GET", "PUT", "DELETE"],
+    // credentials: true,
   })
 );
 app.use(express.json());

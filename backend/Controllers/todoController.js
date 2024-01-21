@@ -13,6 +13,26 @@ module.exports.getTodo = (req, res) =>{
     .then(result => res.json(result))
     .catch(err=> res.json(err))
 }
+module.exports.updateTodo = (req, res) => {
+    const { id } = req.params;
+
+    TodoModel.findById(id)
+        .then(todo => {
+            if (!todo) {
+                return res.status(404).json({ error: 'Todo not found' });
+            }
+            // Toggle the 'done' field
+            todo.done = !todo.done;
+            todo.save()
+                .then(updatedTodo => res.json(updatedTodo))
+                .catch(err => res.json(err));
+        })
+        .catch(err => res.json(err));
+};
+
 module.exports.deleteTodo = (req, res) =>{
- //   TodoModel.findByIdAndDelete(req.)
+    const {id} = req.params;
+  TodoModel.findByIdAndDelete({_id: id})
+  .then(result => res.json(result))
+  .catch(err => res.json(err))
 }

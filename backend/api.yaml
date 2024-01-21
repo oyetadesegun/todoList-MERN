@@ -9,7 +9,7 @@ info:
     name: The Todo App
     url: "https://todo-list-mern-seven.vercel.app"
   servers:
-    -url: "http://localhost:4000"
+    -url: "https://todolist-1yar.onrender.com/"
     description: Here is the link to the backend
 schemes: [http, https]
 paths:

@@ -14,14 +14,14 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/get")
+      .get("https://todolist-1yar.onrender.com/get")
       .then((result) => setTodos(result.data))
       .catch((err) => console.log(err));
   }, [todos]);
 
   const handleEdit = (id) => {
     axios
-      .put("http://localhost:3001/update/" + id)
+      .put("https://todolist-1yar.onrender.com/update/" + id)
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };
@@ -29,7 +29,7 @@ function Home() {
   const handleDelete = (id) => {
     console.log(`delete ${id}`);
     axios
-      .delete("http://localhost:3001/delete/" + id)
+      .delete("https://todolist-1yar.onrender.com/delete/" + id)
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };
@@ -65,7 +65,7 @@ function Home() {
             </div>
           ))
       )}
-      <Link to="http://localhost:3001/api-docs/" target="_blank">
+      <Link to="https://todolist-1yar.onrender.com/api-docs/" target="_blank">
       <BottomButton  />
       </Link>
     </div>

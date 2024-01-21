@@ -6,14 +6,19 @@ const routes = require('./Routers/todoRoutes')
 const app = express()
 app.use(cors())
 app.use(express.json())
+// Swagger Documentation
+const swaggerUI = require('swagger-ui-express')
+const YAML = require('yamljs')
+const swaggerJsDocs = YAML.load('./api.yaml')
+
 
 mongoose.connect(process.env.MONGODB_URI
 ).then(()=>console.log("Connected to MongoDB..."))
 .catch((err)=>console.log(err))
 
-//routes
+//MIDDLEWARE
 app.use(routes)
-
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJsDocs))
 
 app.listen(3001, ()=>{
     console.log("Server is running on port")

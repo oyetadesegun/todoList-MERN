@@ -1,9 +1,9 @@
-import React from 'react'
+// import React from 'react'
 
-function SwaggerDocs() {
-  return (
-    <div>SwaggerDocs</div>
-  )
-}
+// function SwaggerDocs() {
+//   return (
+//     <div>SwaggerDocs</div>
+//   )
+// }
 
-export default SwaggerDocs
+// export default SwaggerDocs

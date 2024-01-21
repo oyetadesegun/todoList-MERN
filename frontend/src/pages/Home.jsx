@@ -65,7 +65,7 @@ function Home() {
             </div>
           ))
       )}
-      <Link to="/api-docs" >
+      <Link to="http://localhost:3001/api-docs/">
       <BottomButton  />
       </Link>
     </div>

@@ -1,7 +1,6 @@
  const TodoModel = require('../Models/Todo')
 
-module.exports.addTodo =
-    (req,res) =>{
+module.exports.addTodo = (req,res) =>{
         const task = req.body.task;
         TodoModel.create({
             task: task

@@ -89,3 +89,27 @@ paths:
                   message:
                     type: string
                     example: Task updated successfully
+#To delete a task
+  /delete/{id}:
+    delete:
+      summary: To delete a task
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: id  # Should match the parameter name in the path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Task deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Task deleted successfully

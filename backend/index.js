@@ -4,7 +4,9 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const routes = require('./Routers/todoRoutes')
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin:["http://localhost:3001",]
+}))
 app.use(express.json())
 // Swagger Documentation
 const swaggerUI = require('swagger-ui-express')

@@ -11,7 +11,7 @@ function Create() {
       return;
     }
 
-    axios.post('http://localhost:3001/add', { task: task })
+    axios.post('https://todo-list-mern-seven.vercel.app/add', { task: task })
       .then(result => {
         setTask('');
         // location.reload();

@@ -7,7 +7,7 @@ info:
     email: johnwellacademy@gmail.com
   license:
     name: The Todo App
-    url: "http://localhost:5173/"
+    url: "https://todo-list-mern-seven.vercel.app"
   servers:
     -url: "http://localhost:4000"
     description: Here is the link to the backend

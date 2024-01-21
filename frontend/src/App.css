@@ -47,3 +47,16 @@
  text-decoration:line-through;
 
 }
+.bottom-left-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 16px;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

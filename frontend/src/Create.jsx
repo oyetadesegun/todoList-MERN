@@ -14,8 +14,8 @@ function Create() {
     axios.post('http://localhost:3001/add', { task: task })
       .then(result => {
         setTask('');
-        // Reload screen
         // location.reload();
+        // Clear the textbox after successful submission
       })
       .catch(err => console.log(err));
   };

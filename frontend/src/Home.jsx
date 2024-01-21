@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Create from "./Create";
 import axios from "axios";
 import { BsCircleFill, BsFillCheckCircleFill, BsFillTrashFill } from "react-icons/bs"; // Assuming you are using react-icons for the icons.
+import BottomButton from "../BottomButton";
 
 function Home() {
   const [todos, setTodos] = useState([]);
@@ -47,6 +48,7 @@ function Home() {
           </div>
         ))
       )}
+      <BottomButton/>
     </div>
   );
 }

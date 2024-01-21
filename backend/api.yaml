@@ -11,7 +11,7 @@ info:
   servers:
     -url: "https://todolist-1yar.onrender.com/"
     description: Here is the link to the backend
-schemes: [http, https]
+schemes: [https, http]
 paths:
 # Returns all Todos
   /get:

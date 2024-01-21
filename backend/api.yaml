@@ -64,3 +64,28 @@ paths:
                   message:
                     type: string
                     example: Task added successfully
+
+# To Update a Task
+  /update/{id}:
+    put:
+      summary: To toggle a task done between true and false
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: id  # Should match the parameter name in the path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Task updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Task updated successfully

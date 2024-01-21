@@ -11,7 +11,7 @@ function Create() {
       return;
     }
 
-    axios.post('https://todo-list-mern-seven.vercel.app/add', { task: task })
+    axios.post('https://todolist-1yar.onrender.com/add', { task: task })
       .then(result => {
         setTask('');
         // location.reload();
